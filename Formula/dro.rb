@@ -4,15 +4,15 @@
 class Dro < Formula
   desc "Super minimal CLI todo (dro) application."
   homepage "https://crates.io/crates/dro"
-  url "https://github.com/anthonwellsjo/dro/releases/download/v0.1.11/dro-mac.tar.gz"
-  version "v0.1.11"
-  sha256 "0230e8d5d7d1339cf0fa46a6b8b93649d85c650b15fbf6682c6250c796f9dd56"
+  url "https://github.com/anthonwellsjo/dro/releases/download/v0.1.12/dro-mac.tar.gz"
+  version "v0.1.12"
+  sha256 "39488a2aac807dd957999819daace0068e184ddf47f70c0dd4916ae9c9c470e9"
   license "MIT"
 
   depends_on "rust" => :build
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
-    system "cargo", "install", *std_cargo_args
+    bin.install "dro"
   end
 end
