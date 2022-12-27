@@ -1,0 +1,19 @@
+name: Auto Merge
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Merge PR
+        uses: jdhao/merge-action@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          merge_method: merge
+          commit_message: Automatically merged by GitHub Action
