@@ -8,12 +8,10 @@ jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Merge PR
-        uses: jdhao/merge-action@v3
+      - uses: reitermarkus/automerge@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          merge_method: merge
-          commit_message: Automatically merged by GitHub Action
+          token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: rebase
+          do-not-merge-labels: never-merge
+          required-labels: automerge
+          pull-request: ${{ github.event.inputs.pull-request }}
