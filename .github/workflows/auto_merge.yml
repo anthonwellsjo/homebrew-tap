@@ -8,10 +8,10 @@ jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
-      - uses: reitermarkus/automerge@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          merge-method: rebase
-          do-not-merge-labels: never-merge
-          #required-labels: automerge
-          pull-request: ${{ github.event.inputs.pull-request }}
+    - name: Merge Pull Request
+      uses: juliangruber/merge-pull-request-action@v1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        number: 1
+        method: squash
+        repo: juliangruber/octokit-action
