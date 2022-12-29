@@ -1,6 +1,7 @@
 name: Auto Merge
 
 on:
+  workflow_dispatch:
   pull_request:
     types: [opened, synchronize]
 
@@ -8,10 +9,8 @@ jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
-      - uses: reitermarkus/automerge@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          merge-method: rebase
-          do-not-merge-labels: never-merge
-          #required-labels: automerge
-          pull-request: ${{ github.event.inputs.pull-request }}
+    - name: Automerge PR
+      #if: contains(github.event.pull_request.labels.*.name, 'ready to merge') && github.event.pull_request.reviews.approved >= 2
+      uses: actions/merge-pull-request@v2
+      with:
+        message: 'This PR is ready to be merged'
