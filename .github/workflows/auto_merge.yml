@@ -8,7 +8,6 @@ on:
 jobs:
   merge:
     runs-on: ubuntu-latest
-    permissions: write-all
     steps:
     - name: Merge Pull Request
       uses: juliangruber/merge-pull-request-action@v1
