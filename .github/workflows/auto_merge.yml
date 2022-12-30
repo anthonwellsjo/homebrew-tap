@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Automatically Merge PR
-      uses: plm9606/automerge_actions@1.2.2
+      uses: anthonwellsjo/automerge_actions@1.2.2
       with:
         # The label name to automatically merge. Default is "automerge".
         label-name: "automerge"
