@@ -9,10 +9,15 @@ jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
-    - name: Merge Pull Request
-      uses: juliangruber/merge-pull-request-action@v1
+    - name: Automatically Merge PR
+      uses: plm9606/automerge_actions@1.2.2
       with:
-        github-token: ${{ secrets.TAP_AUTOMERGE }}
-        number: 1
-        method: squash
-        repo: juliangruber/octokit-action
+        # The number of reviewers to automatically merge. Default is 1.
+        reviewers-number: 0
+        # The merge method ("merge", "squash", "rebase"). Default is "merge"
+        merge-method: "squash"
+        # Let the bot delete the merged branch. true or false.
+        auto-delete: true
+        # GitHub WebHook Secret Token
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
