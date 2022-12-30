@@ -1,5 +1,3 @@
 # homebrew-tap
 
-
-fluff
-skruff
+where the tap lives
