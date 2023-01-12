@@ -4,9 +4,9 @@
 class Crl < Formula
   desc "super minimal CLI clipboard manager."
   homepage "https://crates.io/crates/crl"
-  url "https://github.com/anthonwellsjo/crl/releases/download/v0.1.0/crl-v0.2.5-x86_64-apple-darwin.tar.gz"
-  version "v0.1.0"
-  sha256 "f907f9b43122fd9cf01ded816ace4691ab8d8c91b18952c08de23569ba0f3f9e"
+  url "https://github.com/anthonwellsjo/crl/releases/download/v0.1.1/crl-v0.1.1-x86_64-apple-darwin.tar.gz"
+  version "v0.1.1"
+  sha256 "97691523062b65d99e9113ac5bc7195391a528b7a18298c0b3b1bd4595804775"
   license "MIT"
 
   depends_on "rust" => :build
