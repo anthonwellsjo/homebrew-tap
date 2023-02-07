@@ -4,9 +4,9 @@
 class Dro < Formula
   desc "super minimal CLI todo (dro) application."
   homepage "https://crates.io/crates/dro"
-  url "https://github.com/anthonwellsjo/dro/releases/download/v0.2.8/dro-v0.2.8-x86_64-apple-darwin.tar.gz"
-  version "v0.2.8"
-  sha256 "bc87d446ed4dd33ef8df19aa627994135d39e482e814bd8b177b72981e9a6747"
+  url "https://github.com/anthonwellsjo/dro/releases/download/v0.2.9/dro-v0.2.9-x86_64-apple-darwin.tar.gz"
+  version "v0.2.9"
+  sha256 "90b3c2062a3dc3cdd4269d405881fdf56e934cfd644d650fde63b6807671e65e"
   license "MIT"
 
   depends_on "rust" => :build
